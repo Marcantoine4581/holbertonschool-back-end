@@ -2,10 +2,9 @@
 """Using a rest API, for a given employee ID,
 returns information about his/her TODO list progress
 """
-
+import csv
 import requests
 from sys import argv
-import csv
 
 
 if __name__ == "__main__":
