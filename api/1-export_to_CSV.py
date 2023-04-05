@@ -32,4 +32,3 @@ if __name__ == "__main__":
                 row.append(key.get("completed"))
                 row.append(key.get("title"))
                 writer.writerow(row)
-
