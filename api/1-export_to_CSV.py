@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""Using a rest API, for a given employee ID,
-returns information about his/her TODO list progress
-"""
+"""Export data in the CSV format"""
 import csv
 import requests
 from sys import argv
@@ -30,4 +28,5 @@ if __name__ == "__main__":
                 row.append(USERNAME)
                 row.append(key.get("completed"))
                 row.append(key.get("title"))
+                print(row)
                 writer.writerow(row)
