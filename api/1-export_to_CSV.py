@@ -21,7 +21,7 @@ if __name__ == "__main__":
         if key.get("id") == USER_ID:
             USERNAME = key.get("username")
 
-    with open("USER_ID.csv", "w", newline="") as csvfile:
+    with open(str(USER_ID) + ".csv", "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         for key in dict_todos:
             row = []
