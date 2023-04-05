@@ -20,7 +20,7 @@ if __name__ == "__main__":
             USERNAME = key.get("username")
 
     with open(str(USER_ID) + ".csv", "w", newline="") as csvfile:
-        writer = csv.writer(csvfile, quoting=CSV.QUOTE_ALL)
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for key in dict_todos:
             row = []
             if key.get("userId") == USER_ID:
