@@ -20,18 +20,16 @@ if __name__ == "__main__":
         USERNAME = employee["username"]
         new_list = []
         for task in dict_todos:
-            new_dict = {}
-            new_dict["username"] = USERNAME
-            new_dict["task"] = task["title"]
-            new_dict["completed"] = task["completed"]
-            new_list.append(new_dict)
+            if task.get("userId") == int(USER_ID):
+                new_dict = {}
+                new_dict["username"] = USERNAME
+                new_dict["task"] = task["title"]
+                new_dict["completed"] = task["completed"]
+                new_list.append(new_dict)
 
         new_dict2[USER_ID] = new_list
 
     all_tasks = new_dict2
 
-    #json_object = json.dumps(new_dict2)
-
     with open("todo_all_employees.json", "w") as f:
-       #f.write(json_object)
        json.dump(all_tasks, f)
