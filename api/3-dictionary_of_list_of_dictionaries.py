@@ -32,4 +32,4 @@ if __name__ == "__main__":
     all_tasks = new_dict2
 
     with open("todo_all_employees.json", "w") as f:
-       json.dump(all_tasks, f)
+        json.dump(all_tasks, f)
